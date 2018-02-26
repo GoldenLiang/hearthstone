@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>山寨炉石</title>
+<link rel="stylesheet" href="css/base.css" media="all">
+<script src="js/jquery-1.js" type="text/javascript"></script>
+<script src="js/core.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="page_index page_reg">
+        <h6>一个卡牌爱好者独立制作的<b>炉石传说</b>山寨网页版</h6>
+        <h1>山寨炉石</h1>
+        <h5>也许你可以试试这里不一样的味道</h5>
+        <div class="login">
+            <label>用户名：</label>
+            <input class="text" id="txt_mail">
+            <label>密码：</label>
+            <input id="txt_psw" class="text" type="password">
+            <label style="display: none;">邀请码：</label>
+            <input id="txt_code" class="text" value="ipinsgisgood" style="display: none;">
+            <div class="btn" onclick="reg()">注册</div>
+            <a href="index.jsp">登陆</a>
+        </div>
+    </div>
+
+    <script type="text/javascript"> 
+        function reg() { 
+            var n = $("#txt_mail").val(); 
+            var p = $("#txt_psw").val(); 
+             
+            if (!r.validate("用户名", n, ["notempty", "username"])) 
+                return; 
+            if (!r.validate("密码", p, ["notempty"])) 
+                return; 
+            
+ 
+            r.cuser.reg(n, p,  function () { 
+                location = "index.jsp"; 
+            }); 
+        }; 
+    </script>
+
+</body></html>
